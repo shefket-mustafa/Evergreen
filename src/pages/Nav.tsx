@@ -6,7 +6,7 @@ export default function Nav () {
 
 
     return <div className="w-full bg-transparent flex flex-row justify-between px-20 lg:h-15 items-center">
-            <div className="text-emerald-400 text-4xl text-" >
+            <div className="text-emerald-400 text-4xl" style={{fontFamily: "'Pacifico', cursive"}} >
                 <p >EverGreen</p>
             </div>
 
@@ -19,7 +19,7 @@ export default function Nav () {
             </div>
 
             <div className="px-6 py-2 rounded-4xl bg-emerald-400">
-                <p>Request free Survey</p>
+                <p >Request free Survey</p>
             </div>
         </div>
     
