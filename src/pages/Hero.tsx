@@ -1,9 +1,21 @@
-import { Link } from "react-router";
+
 import SatisfiedCustomers from "../components/SatisfiedCustomers";
+import Nav from "./Nav";
+import { motion } from "framer-motion"
 
 export default function Hero() {
   return (
-    <div className="flex flex-col justify-center items-center mt-30">
+
+    <div 
+        className=" relative flex flex-col justify-center items-center bg-cover min-h-screen px-4 pt-30" style={{backgroundImage: "url('/images/background-hero.png')"}}>
+        
+        <Nav />
+
+        <motion.div
+        initial={{y:100, opacity: 0}}
+        animate={{y:0, opacity: 1}}
+        transition={{duration: 0.6, ease: 'easeOut'}}
+        className="flex flex-col justify-center items-center">
       <p className="text-emerald-400 text-8xl" style={{fontFamily: "'Pacifico', cursive"}}>EverGreen</p>
       <p className="text-white font-bold mt-10">LAWN AND WEED SERVICES</p>
       <p className="text-white mt-5 max-w-200" >
@@ -14,13 +26,14 @@ export default function Hero() {
 
       <div className="flex gap-5 font-sans font-medium mt-5">
         <div className="flex text-black bg-emerald-400 px-6 py-2  rounded-4xl cursor-pointer">
-        <Link to='/services'>Services</Link>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        <a href='#services'>Services</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
         </div>
-        <Link to='/contact' className="text-black bg-white px-6 py-2 rounded-4xl">Get in Touch</Link>
+        <a href='#contact' className="text-black bg-white px-6 py-2 rounded-4xl">Get in Touch</a>
       </div>
-
       <SatisfiedCustomers />
+      </motion.div>
+
     </div>
   );
 }
