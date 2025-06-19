@@ -9,6 +9,7 @@
 - ⚡️ Vite (blazing-fast dev server)
 - ⚛️ React 18+ with TypeScript
 - 🎨 Tailwind CSS
+- 🎨 Framer Motion
 - 📦 Planning to add Redux Toolkit
 
 ## Project Goals
