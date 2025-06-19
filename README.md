@@ -1,6 +1,6 @@
 # 🌿 EverGreen
 
-**EverGreen** is a personal project built with **Vite, React + TypeScript**, and styled using **Tailwind CSS**. The goal is to create a clean, scrollable single-page lawn care website as a way to practice component structuring, layout design, and frontend state management concepts.
+**EverGreen** is a personal project built with **Vite, React + TypeScript**, and styled using **Tailwind CSS and Framer Motion**. The goal is to create a clean, scrollable single-page lawn care website as a way to practice component structuring, layout design, and frontend state management concepts.
 
 > 🧠 This project is still in progress. It's a sandbox for experimenting while learning **Redux** and modern frontend architecture.
 
