@@ -18,6 +18,7 @@
 - Section-based content (Hero, Services, Contact, etc.)
 - State management using Redux for form submission & modal control (coming soon)
 - Practice code structuring and reusability
+- Redux usage for global state managment
 
 ---
 
