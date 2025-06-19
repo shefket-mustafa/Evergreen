@@ -13,7 +13,7 @@ export default function ServiceItemDetails({ backgroundImg, serviceDescription, 
   
 
   return (
-    <div className="w-full min-h-screen flex flex-col md:flex-row px-10 py-12 bg-white">
+    <div className="w-full min-h-screen flex flex-col md:flex-row px-10 py-12  bg-white">
       
       {/* Left: Background image */}
       <div

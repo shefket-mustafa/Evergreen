@@ -77,8 +77,13 @@ export default function Services() {
         </div>
 
 
-<div>
-    
+<motion.div 
+ initial={{y:100, opacity:0}}
+ whileInView={{y:0, opacity:1}}
+ transition={{duration:1, ease:'easeOut'}}
+ viewport={{ once: true, amount: 0.1 }}
+>
+
       <p className="text-2xl pl-8 font-bold">Explore Our Services</p>     
       <p className="text-lgx pl-8 text-gray-500">Professional Solutions for a Healthier, Thicker, Weed-Free Lawn</p>
     
@@ -88,7 +93,7 @@ export default function Services() {
         {ServiceItems.map(service => <div> <ServicesItem key={service.id} service={service} /></div>)}
         </div>
       
-</div>
+</motion.div>
     </motion.div>
 
 </>

@@ -18,9 +18,9 @@ export default function ServicesItem( {service}: Props ){
     const navigate = useNavigate();
 
 
-    return <div onClick={() => navigate(`/services/${service.id}/details`)} className=" w-65 rounded-md overflow-hidden transition-shadow p-2 shadow-md cursor-pointer">
+    return <div onClick={() => navigate(`/services/${service.id}/details`)} className=" w-65 rounded-md overflow-hidden transition-shadow p-2 shadow-lg cursor-pointer">
 
-        <div className="h-40  bg-cover bg-center" style={{backgroundImage: service.backgroundImg}}>
+        <div className="h-40  bg-cover rounded-md bg-center" style={{backgroundImage: service.backgroundImg}}>
         </div>
 
         <p className="text-black font-bold text-sm py-1 bg-white">{service.serviceTitle}</p>
