@@ -15,6 +15,7 @@ export default function Hero() {
         initial={{y:100, opacity: 0}}
         animate={{y:0, opacity: 1}}
         transition={{duration: 0.6, ease: 'easeOut'}}
+        viewport={{ once: true, amount: 0.3 }}
         className="flex flex-col justify-center items-center">
       <p className="text-emerald-400 text-8xl" style={{fontFamily: "'Pacifico', cursive"}}>EverGreen</p>
       <p className="text-white font-bold mt-10">LAWN AND WEED SERVICES</p>

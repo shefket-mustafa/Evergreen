@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
 
 export default function Nav() {
@@ -15,7 +15,7 @@ export default function Nav() {
         className="text-emerald-400 text-4xl"
         style={{ fontFamily: "'Pacifico', cursive" }}
       >
-        <Link to="/">EverGreen</Link>
+        <a href="#/">EverGreen</a>
       </div>
 
       <div className="flex gap-10 text-white">
