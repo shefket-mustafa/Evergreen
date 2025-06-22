@@ -1,4 +1,5 @@
 
+import { Link } from "react-router";
 import SatisfiedCustomers from "../components/SatisfiedCustomers";
 import Nav from "./Nav";
 import { motion } from "framer-motion"
@@ -27,10 +28,10 @@ export default function Hero() {
 
       <div className="flex gap-5 font-sans font-medium mt-5">
         <div className="flex text-black bg-emerald-400 px-6 py-2  rounded-4xl cursor-pointer">
-        <a href='#services'>Services</a>
+        <Link to='/services'>Services</Link>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
         </div>
-        <a href='#contact' className="text-black bg-white px-6 py-2 rounded-4xl">Get in Touch</a>
+        <Link to='/contact' className="text-black bg-white px-6 py-2 rounded-4xl">Get in Touch</Link>
       </div>
       <SatisfiedCustomers />
       </motion.div>

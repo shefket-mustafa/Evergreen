@@ -1,25 +1,20 @@
-
-import ScrollOnTop from "./helpers/ScrollOnTop"
-import Home from "./pages/Home"
-import Services from "./pages/Services"
-
+import ScrollOnTop from "./helpers/ScrollOnTop";
+import Footer from "./pages/Footer";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
 
 function App() {
-
-  
-
   return (
-   <>
-   <ScrollOnTop />
-   <section id="/">
-  <Home />
-   </section>
-  <section id="services">
-  <Services />
-  </section>
-  
-   </>
-  )
+    <>
+      <ScrollOnTop />
+
+      <Home />
+
+      <Services />
+
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
