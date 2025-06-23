@@ -1,7 +1,6 @@
 
 import { Link } from "react-router";
 import SatisfiedCustomers from "../components/SatisfiedCustomers";
-import Nav from "./Nav";
 import { motion } from "framer-motion"
 
 export default function Hero() {
@@ -10,8 +9,6 @@ export default function Hero() {
     <div 
         className=" relative flex flex-col justify-center items-center bg-cover min-h-screen px-4 pt-30" style={{backgroundImage: "url('/images/background-hero.png')"}}>
         
-        <Nav />
-
         <motion.div
         initial={{y:100, opacity: 0}}
         animate={{y:0, opacity: 1}}
