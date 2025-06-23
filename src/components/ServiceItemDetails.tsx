@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-interface Props {
+export interface Props {
   id: string;
   backgroundImg: string;
   serviceTitle: string;
@@ -13,13 +13,14 @@ export default function ServiceItemDetails({
   serviceDescription,
   serviceTitle,
   priceRange,
+  
 }: Props) {
   return (
-    <div className="w-full min-h-screen flex flex-col md:flex-row px-10 py-12  bg-white">
+    <div className="w-full lg:min-h-172 flex flex-col md:flex-row px-10 py-12  bg-white">
       {/* Left: Background image */}
       <div
         className="md:w-1/2 h-96 md:h-auto bg-cover bg-center rounded-xl"
-        style={{ backgroundImage: backgroundImg }}
+        style={{ backgroundImage: `url(${backgroundImg})` }}
       />
 
       {/* Right: Info and pricing */}

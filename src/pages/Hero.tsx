@@ -2,7 +2,7 @@
 import { Link } from "react-router";
 import SatisfiedCustomers from "../components/SatisfiedCustomers";
 import { motion } from "framer-motion"
-import Services from "./Services";
+import ServicesHero from "./ServicesHero";
 
 export default function Hero() {
   return (
@@ -38,7 +38,7 @@ export default function Hero() {
 
     </div>
 
-    <Services />
+    <ServicesHero />
     </>
   );
 }

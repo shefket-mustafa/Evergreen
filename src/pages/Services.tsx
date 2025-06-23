@@ -1,117 +1,155 @@
 import { motion } from "framer-motion";
-import ServicesItem from "../components/ServicesItem";
+import { useNavigate } from "react-router";
 
-export default function Services() {
-  const ServiceItems = [
-    {
-      id: "0",
-      backgroundImg: "url('/images/lawnmower-service.jpg')",
-      serviceTitle: "Scarification",
-      serviceDescription: "Revive Your Lawn - Deep Clean for Thicker Grass",
-    },
+const services = [
     {
       id: "1",
-      backgroundImg: "url('/images/seeding.jpg')",
-      serviceTitle: "Seeding",
-      serviceDescription: "Fill Bare Spots - Grow a Denser, Softer Lawn",
+      serviceTitle: "Lawn Mowing",
+      backgroundImg: "/images/lawnmower-service.jpg",
+      serviceDescription: "Professional lawn mowing to keep your yard neat and healthy year-round.",
+      priceRange: "$25 - $50"
     },
     {
       id: "2",
-      backgroundImg: "url('/images/turf-laying.jpeg')",
-      serviceTitle: "Turf Laying",
-      serviceDescription:
-        "Instant Lawn Transformation - Fresh Rolls of Premium Turf",
+      serviceTitle: "Weed Control",
+      backgroundImg: "/images/weed-control.jpg",
+      serviceDescription: "Eliminate weeds efficiently and prevent them from coming back.",
+      priceRange: "$30 - $60"
     },
     {
       id: "3",
-      backgroundImg: "url('/images/aeration.jpg')",
-      serviceTitle: "Aeration",
-      serviceDescription:
-        "Improve Soil Health - Let Your Lawn Breathe and Thrive",
+      serviceTitle: "Fertilization",
+      backgroundImg: "/images/fertilization.jpg",
+      serviceDescription: "Boost your garden's growth with tailored fertilization treatments.",
+      priceRange: "$40 - $80"
     },
     {
       id: "4",
-      backgroundImg: "url('/images/fertilization.jpg')",
-      serviceTitle: "Fertilization",
-      serviceDescription:
-        "Boost Lawn Nutrition - Targeted Feeding for Stronger Growth",
+      serviceTitle: "Pest Management",
+      backgroundImg: "/images/pest-managment.webp",
+      serviceDescription: "Safe and effective pest control to protect your landscape.",
+      priceRange: "$50 - $90"
     },
+    {
+      id: "5",
+      serviceTitle: "Soil Aeration",
+      backgroundImg: "/images/aeration.jpg",
+      serviceDescription: "Improve root growth and soil health with our aeration service.",
+      priceRange: "$35 - $70"
+    },
+    {
+      id: "6",
+      serviceTitle: "Garden Design",
+      backgroundImg: "/images/design.jpg",
+      serviceDescription: "Transform your outdoor space with personalized garden designs.",
+      priceRange: "$100 - $300"
+    },
+    {
+      id: "7",
+      serviceTitle: "Hedge Trimming",
+      backgroundImg: "/images/hedge-trimming.webp",
+      serviceDescription: "Keep your hedges clean, even, and beautifully maintained.",
+      priceRange: "$30 - $75"
+    },
+    {
+      id: "8",
+      serviceTitle: "Leaf Removal",
+      backgroundImg: "/images/leaf-removal.jpeg",
+      serviceDescription: "Seasonal leaf cleanup to keep your property looking fresh.",
+      priceRange: "$20 - $60"
+    },
+    {
+      id: "9",
+      serviceTitle: "Tree Pruning",
+      backgroundImg: "/images/pruning.webp",
+      serviceDescription: "Expert tree trimming to ensure plant health and safety.",
+      priceRange: "$50 - $120"
+    },
+    {
+      id: "10",
+      serviceTitle: "Mulching",
+      backgroundImg: "/images/mulching.jpeg",
+      serviceDescription: "Mulching services to help your soil retain moisture and nutrients.",
+      priceRange: "$25 - $65"
+    },
+    {
+      id: "11",
+      serviceTitle: "Irrigation Systems",
+      backgroundImg: "/images/irrigation-systems.jpeg",
+      serviceDescription: "Installation and maintenance of efficient irrigation systems.",
+      priceRange: "$200 - $1000"
+    },
+    {
+      id: "12",
+      serviceTitle: "Seasonal Cleanup",
+      backgroundImg: "/images/seasonal-cleanup.avif",
+      serviceDescription: "Comprehensive cleanup services to prepare your garden for each season.",
+      priceRange: "$80 - $150"
+    },
+    {
+      id: "13",
+      serviceTitle: "Landscape Lighting",
+      backgroundImg: "/images/landscape-lighting.webp",
+      serviceDescription: "Highlight your landscape with modern and efficient lighting solutions.",
+      priceRange: "$150 - $500"
+    },
+    {
+      id: "14",
+      serviceTitle: "Composting",
+      backgroundImg: "/images/composting.webp",
+      serviceDescription: "Eco-friendly composting solutions to enrich your garden soil.",
+      priceRange: "$25 - $55"
+    }
   ];
 
+  interface Details {
+    id: string,
+        backgroundImg: string,
+        serviceTitle: string,
+        serviceDescription: string,
+        priceRange: string;
+  }
+
+  interface DetailsHandler {
+    detailsHandler: (details: Details) => void
+  }
+
+export default function Services({detailsHandler}: DetailsHandler) {
+    const navigate = useNavigate();
+
+
   return (
-    <>
-      <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.1 }}
-        className="w-full h-screen flex py-8  flex-col "
-      >
-        {/* left container  */}
-        <div className="flex ">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="py-10 px-6 max-w-screen-xl mx-auto"
+    >
+      <h2 className="text-4xl font-bold text-emerald-500 mb-8 text-center">
+        Our Services
+      </h2>
+
+      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {services.map((service) => (
           <div
-            className="relative w-1/2 bg-cover h-96 rounded-3xl mx-8"
-            style={{ backgroundImage: "url('/images/services-4.jpg')" }}
+            key={service.id}
+            className="bg-white cursor-pointer rounded-2xl shadow-md p-6 hover:shadow-lg transition text-center"
+            onClick={() => {
+                navigate(`/services/${service.id}/details`)
+                detailsHandler(service)
+            }}
           >
-            <div className="absolute flex flex-col gap-3 bottom-5 left-10 text-black">
-              <p className="bg-white/70 px-4 py-2 rounded-4xl">
-                ✅ A thicker, Greener Lawn in Weeks
-              </p>
-              <p className="bg-white/70 px-4 py-2 rounded-4xl">
-                ✅ No More Weeds - Guaranteed
-              </p>
-              <p className="bg-white/70 px-4 py-2 rounded-4xl">
-                ✅ Savey You Time & Money Long-Term
-              </p>
-            </div>
-          </div>
-
-          {/* right container */}
-          <div className="w-1/2 flex flex-col gap-5">
-            <p className="text-6xl font-bold">
-              Where Pasion for Greenery Meets Professional Care
-            </p>
-            <p className="text-gray-500">
-              EverGreen Lawn & Weed delivers professional, specialized lawn care
-              services across Bulgaria. Our experienced team combines in-depth
-              turf knowledge with high-quality systemic herbicides to strenghen
-              your grass, enhancing its health, color and resilience. We excel
-              at moss control - not just removing it but correcting the
-              underlying conditions to prevent its return. Using professional
-              scarification and aeration techniques we ensure a long-term
-              improvements to your lanw's vitality.
-            </p>
-
-            <p className="text-gray-500">
-              Our approach is efficient, effective and safe for families and
-              pets. Plus with our expertise and commercial-grade equipment you
-              will save time and money compared to DIY methods. Trust EverGreen
-              Lawn & Weed for a healthier, greener lawn that lasts.
+            <img src={service.backgroundImg} alt={service.serviceTitle} className="w-full h-40 object-cover rounded-md mb-4" />
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              {service.serviceTitle}
+            </h3>
+            <p className="text-sm text-gray-500">
+              Learn more about our {service.serviceTitle.toLowerCase()} solutions and how they can improve your outdoor space.
             </p>
           </div>
-        </div>ß
-
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          <p className="text-2xl pl-8 font-bold">Explore Our Services</p>
-          <p className="text-lgx pl-8 text-gray-500">
-            Professional Solutions for a Healthier, Thicker, Weed-Free Lawn
-          </p>
-
-          <div className="flex justify-between p-5 items-center">
-            {ServiceItems.map((service) => (
-              <div>
-                {" "}
-                <ServicesItem key={service.id} service={service} />
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </motion.div>
-    </>
+        ))}
+      </div>
+    </motion.div>
   );
 }
