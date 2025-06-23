@@ -10,12 +10,12 @@ export default function Nav() {
         initial={{ y: -100, opacity: 0}}
         animate={{ y: 0, opacity: 1 }}
         transition={{duration: 0.6, ease: "easeOut"}}
-    className="absolute left-0 top-0 w-full bg-transparent flex flex-row justify-between mt-5 px-20 lg:h-15 items-center">
+    className="w-full z-50  flex flex-row bg-gray-800 justify-between mt-5 px-20 lg:h-15 items-center">
       <div
         className="text-emerald-400 text-4xl"
         style={{ fontFamily: "'Pacifico', cursive" }}
       >
-        <Link to="#/">EverGreen</Link>
+        <Link to="/">EverGreen</Link>
       </div>
 
       <div className="flex gap-10 text-white">

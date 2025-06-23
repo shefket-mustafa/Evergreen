@@ -2,13 +2,16 @@
 import { Link } from "react-router";
 import SatisfiedCustomers from "../components/SatisfiedCustomers";
 import { motion } from "framer-motion"
+import Services from "./Services";
 
 export default function Hero() {
   return (
-
+<>
     <div 
-        className=" relative flex flex-col justify-center items-center bg-cover min-h-screen px-4 pt-30" style={{backgroundImage: "url('/images/background-hero.png')"}}>
+        className="flex flex-col justify-center items-center bg-cover min-h-screen px-4 pt-30" 
+        style={{backgroundImage: "url('/images/background-hero.png')"}}>
         
+
         <motion.div
         initial={{y:100, opacity: 0}}
         animate={{y:0, opacity: 1}}
@@ -34,5 +37,8 @@ export default function Hero() {
       </motion.div>
 
     </div>
+
+    <Services />
+    </>
   );
 }

@@ -10,9 +10,9 @@ export default function Footer() {
     initial={{ y: 150, opacity: 0}}
     animate={{ y: 0, opacity: 1 }}
     transition={{duration: 1, ease: "easeOut"}}
-    className="w-full mt-10 border-t-4 min-40 px-15 flex flex-col font-sans">
+    className="w-full mt-10 border-t-4 min-40 px-15 bg-gray-800 flex flex-col font-sans">
 
-        <div className="flex justify-between py-5">
+        <div className="flex justify-between text-white py-5">
         <div>
         <h1 className="font-bold">
             Policies</h1>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
         </div>
 
-        <div className="flex items-center justify-center border-t-1 h-12">
+        <div className="flex items-center justify-center text-white border-t-1 h-12">
             <p>© 2025 Evergreen • Nurturing Digital Growth</p>
         </div>
 

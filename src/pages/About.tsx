@@ -6,7 +6,8 @@ export default function About() {
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="max-w-4xl mx-auto px-6 py-16 text-gray-800"
+      className="w-full lg:h-screen mx-auto px-6 flex flex-col justify-center text-gray-900 bg-cover"
+
     >
       <h1 className="text-4xl font-bold mb-6">About Evergreen</h1>
 
