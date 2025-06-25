@@ -45,7 +45,7 @@ export default function Services() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.1 }}
-        className="w-full h-screen flex py-8  flex-col "
+        className="w-full h-screen flex py-8 mb-40  flex-col "
       >
         {/* left container  */}
         <div className="flex ">
