@@ -1,9 +1,32 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
+import {useForm} from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
+
+interface FormData {
+    name: string,
+    email: string,
+    message: string
+}
+
+const schema = yup.object({
+    name: yup.string().required("Name is required"),
+    email: yup.string().email("Invalid email").required("Email is required"),
+    message: yup.string().min(10, "Message must be at least 10 characters").required("Message is required")
+}).required()
 
 export default function Contact() {
 
     const navigate = useNavigate();
+    const {register, handleSubmit, formState: {errors}} = useForm<FormData>({resolver:yupResolver(schema)});
+
+    const onSubmit = (data: FormData) => {
+        console.log(data);
+        alert("Message sent")
+        navigate('/')
+    }
+   
 
 
   return (
@@ -39,12 +62,14 @@ export default function Contact() {
         className="w-full lg:w-1/2"
       >
         <h2 className="text-3xl font-bold text-emerald-600 mb-4">Contact Us</h2>
-        <form className="bg-gray-50 p-6 rounded-xl shadow-md space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)}
+        className="bg-gray-50 p-6 rounded-xl shadow-md space-y-4">
           <div>
             <label htmlFor="name" className="block font-medium text-gray-700">
               Name
             </label>
             <input
+            {...register("name")}
               type="text"
               id="name"
               className="w-full mt-1 p-2 border rounded-md focus:outline-emerald-500"
@@ -57,6 +82,7 @@ export default function Contact() {
               Email
             </label>
             <input
+            {...register("email")}
               type="email"
               id="email"
               className="w-full mt-1 p-2 border rounded-md focus:outline-emerald-500"
@@ -72,6 +98,7 @@ export default function Contact() {
               Message
             </label>
             <textarea
+            {...register("message")}
               id="message"
               rows={5}
               className="w-full mt-1 p-2 border rounded-md focus:outline-emerald-500"
@@ -80,7 +107,6 @@ export default function Contact() {
           </div>
 
           <button
-          onClick={() => navigate('/')}
             type="submit"
             className="bg-emerald-500 hover:bg-emerald-600 cursor-pointer text-white font-semibold px-6 py-2 rounded-3xl transition"
           >
