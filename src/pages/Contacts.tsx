@@ -23,6 +23,8 @@ export default function Contact() {
 
     const onSubmit = (data: FormData) => {
         console.log(data);
+        console.log(errors);
+        
         alert("Message sent")
         navigate('/')
     }

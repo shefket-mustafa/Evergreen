@@ -6,17 +6,7 @@ import Hero from "./pages/Hero";
 import Nav from "./components/Nav";
 import Services from "./pages/Services";
 import ServiceItemDetails from "./components/ServiceItemDetails";
-import { useState } from "react";
 import Contact from "./pages/Contacts";
-
-interface ItemDetailsProps  {
-  id: string;
-  backgroundImg: string;
-  serviceTitle: string;
-  serviceDescription: string;
-  priceRange: string;
-}
-
 
 function App() {
 
