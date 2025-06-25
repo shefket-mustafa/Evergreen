@@ -7,6 +7,7 @@ import Nav from "./components/Nav";
 import Services from "./pages/Services";
 import ServiceItemDetails from "./components/ServiceItemDetails";
 import Contact from "./pages/Contacts";
+import Treatments from "./pages/Treatments";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Route path='/services' element={<Services />} /> 
       <Route path='/about' element={<About />} /> 
       <Route path='/contact' element={<Contact />} /> 
+      <Route path='/treatments' element={<Treatments />} /> 
       <Route path='/services/:id/details' element={ <ServiceItemDetails /> } /> 
       </Routes>
       <Footer />
