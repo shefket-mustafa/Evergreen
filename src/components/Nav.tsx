@@ -6,11 +6,12 @@ export default function Nav() {
     const navigate = useNavigate();
 
   return (
+    <>
     <motion.div 
         initial={{ y: -100, opacity: 0}}
         animate={{ y: 0, opacity: 1 }}
         transition={{duration: 0.6, ease: "easeOut"}}
-    className="absolute top-0  w-full z-50  flex flex-row bg-gray-800 justify-between  px-20 lg:h-15 items-center">
+    className="absolute top-0  w-full z-50  flex flex-row bg-gray-800 justify-between  px-20 h-20 items-center">
       <div
         className="text-emerald-400 text-4xl"
         style={{ fontFamily: "'Pacifico', cursive" }}
@@ -30,5 +31,6 @@ export default function Nav() {
         <p>Request free Survey</p>
       </div>
     </motion.div>
+    </>
   );
 }

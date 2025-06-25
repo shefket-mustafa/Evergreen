@@ -10,7 +10,7 @@ export default function Hero() {
   return (
 <>
     <div 
-        className="relative flex flex-col justify-center items-center bg-cover min-h-screen px-4 pt-40" 
+        className="relative flex flex-col justify-center items-center bg-cover h-screen px-4 pt-20" 
         style={{backgroundImage: "url('/images/background-hero.png')"}}>
         
 
