@@ -7,6 +7,7 @@ import Nav from "./components/Nav";
 import Services from "./pages/Services";
 import ServiceItemDetails from "./components/ServiceItemDetails";
 import { useState } from "react";
+import Contact from "./pages/Contacts";
 
 interface ItemDetailsProps  {
   id: string;
@@ -19,20 +20,16 @@ interface ItemDetailsProps  {
 
 function App() {
 
-  const [itemDetails, setItemDetails] = useState<ItemDetailsProps | null>(null);
-
-  const itemDetailsHandler = (data: ItemDetailsProps) => {
-    setItemDetails(data);
-  };
   return (
     <>
       <ScrollOnTop />
       <Nav />
     <Routes>
       <Route path='/' element={<Hero />} /> 
-      <Route path='/services' element={<Services detailsHandler={itemDetailsHandler}/>} /> 
+      <Route path='/services' element={<Services />} /> 
       <Route path='/about' element={<About />} /> 
-      <Route path='/services/:id/details' element={ itemDetails ? <ServiceItemDetails {...itemDetails}/> : <div>Loading...</div>} /> 
+      <Route path='/contact' element={<Contact />} /> 
+      <Route path='/services/:id/details' element={ <ServiceItemDetails /> } /> 
       </Routes>
       <Footer />
     </>

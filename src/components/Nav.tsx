@@ -10,7 +10,7 @@ export default function Nav() {
         initial={{ y: -100, opacity: 0}}
         animate={{ y: 0, opacity: 1 }}
         transition={{duration: 0.6, ease: "easeOut"}}
-    className="w-full z-50  flex flex-row bg-gray-800 justify-between mt-5 px-20 lg:h-15 items-center">
+    className="absolute top-0  w-full z-50  flex flex-row bg-gray-800 justify-between  px-20 lg:h-15 items-center">
       <div
         className="text-emerald-400 text-4xl"
         style={{ fontFamily: "'Pacifico', cursive" }}
