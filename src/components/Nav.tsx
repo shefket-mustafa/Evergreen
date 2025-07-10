@@ -39,7 +39,7 @@ export default function Nav() {
 
           
           <div
-            onClick={() => navigate('/survey')}
+            onClick={() => navigate('/contact')}
             className="hidden sm:block px-4 py-2 rounded-2xl bg-emerald-400 cursor-pointer text-sm"
           >
             <p>Request free Survey</p>
