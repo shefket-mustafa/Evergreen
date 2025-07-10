@@ -1,4 +1,7 @@
-    export default function Gallery(){
+import {motion} from "framer-motion"
+
+
+export default function Gallery(){
 
 
 
@@ -6,7 +9,12 @@
 
         
 
-    <div className="max-w-screen-xl md:h-screen mx-auto px-4 mt-20 py-12">
+    <motion.div
+    initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    className="max-w-screen-xl md:h-screen mx-auto px-4 mt-20 py-12">
     <h2 className="text-4xl text-center font-bold text-emerald-500 mb-10">Gallery</h2>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -73,6 +81,6 @@
             </div>
         </div>
     </div>
-    </div>
+    </motion.div>
     )
     }
