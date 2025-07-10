@@ -20,9 +20,9 @@ export default function Hero() {
         transition={{duration: 0.6, ease: 'easeOut'}}
         viewport={{ once: true, amount: 0.3 }}
         className="flex flex-col justify-center items-center">
-      <p className="text-emerald-400 text-8xl" style={{fontFamily: "'Pacifico', cursive"}}>EverGreen</p>
+      <p className="text-emerald-400 text-5xl md:text-7xl lg:text-8xl " style={{fontFamily: "'Pacifico', cursive"}}>EverGreen</p>
       <p className="text-white font-bold mt-10">LAWN AND WEED SERVICES</p>
-      <p className="text-white mt-5 max-w-200" >
+      <p className="text-white mt-5 max-w-2xl text-center mx-auto px-4" >
         In EverGreen, we specialize in expert lawn care and targeted weed control to
         keep your property lush, civrant and weed-free season after season.
         Our eco-friendly treatments and reliable service ensure a healthy, green lawn you’ll love coming home to.

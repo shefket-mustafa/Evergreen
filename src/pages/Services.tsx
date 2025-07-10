@@ -12,9 +12,9 @@ export default function Services() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="py-30 px-6 max-w-screen-xl mx-auto"
+      className="py-20 px-6 max-w-screen-xl mx-auto mb-20"
     >
-      <h2 className="text-4xl font-bold text-emerald-500 mb-8 text-center">
+      <h2 className="text-2xl md:text-4xl font-bold text-emerald-500 mb-8 mt-15 text-center">
         Our Services
       </h2>
 

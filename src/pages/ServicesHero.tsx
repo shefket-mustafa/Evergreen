@@ -45,12 +45,12 @@ export default function Services() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.1 }}
-        className="w-full h-screen flex py-8 mb-40  flex-col "
+        className="w-full flex py-8  flex-col "
       >
         {/* left container  */}
-        <div className="flex ">
+        <div className="flex">
           <div
-            className="relative w-1/2 bg-cover h-96 rounded-3xl mx-8"
+            className="relative w-1/2 bg-cover h-96 rounded-3xl mx-8 hidden md:flex"
             style={{ backgroundImage: "url('/images/services-4.jpg')" }}
           >
             <div className="absolute flex flex-col gap-3 bottom-5 left-10 text-black">
@@ -67,9 +67,9 @@ export default function Services() {
           </div>
 
           {/* right container */}
-          <div className="w-1/2 flex flex-col gap-5">
-            <p className="text-6xl font-bold">
-              Where Pasion for Greenery Meets Professional Care
+          <div className="w-full md:w-1/2 flex flex-col gap-5 items-center text-center md:items-start md:text-left px-6 md:px-0 mb-5">
+            <p className="text-4xl lg:text-6xl font-bold">
+              Where Passion for Greenery Meets Professional Care
             </p>
             <p className="text-gray-500">
               EverGreen Lawn & Weed delivers professional, specialized lawn care
@@ -89,20 +89,21 @@ export default function Services() {
               Lawn & Weed for a healthier, greener lawn that lasts.
             </p>
           </div>
-        </div>ß
+        </div>
 
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.1 }}
+          className="hidden md:flex flex-col items-center text-center px-3"
         >
-          <p className="text-2xl pl-8 font-bold">Explore Our Services</p>
-          <p className="text-lgx pl-8 text-gray-500">
+          <p className="text-2xl font-bold">Explore Our Services</p>
+          <p className="text-lgx text-gray-500">
             Professional Solutions for a Healthier, Thicker, Weed-Free Lawn
           </p>
 
-          <div className="flex justify-between p-5 items-center">
+          <div className="flex flex-col lg:flex-row justify-between p-5 items-center">
             {ServiceItems.map((service) => (
               <div key={service.id}>
                 <ServicesItem  service={service} />

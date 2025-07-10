@@ -10,7 +10,7 @@ export default function Treatments() {
       viewport={{ once: true }}
       className="py-20 px-6 max-w-screen-xl mx-auto"
     >
-      <h2 className="text-2xl font-bold text-emerald-600 mt-20 text-center">
+      <h2 className="text-2xl md:text-4xl font-bold text-emerald-600 mt-20 mb-20 text-center">
         Our Treatment Methods
       </h2>
 

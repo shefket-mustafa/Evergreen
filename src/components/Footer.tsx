@@ -10,7 +10,7 @@ export default function Footer() {
     initial={{ y: 150, opacity: 0}}
     animate={{ y: 0, opacity: 1 }}
     transition={{duration: 1, ease: "easeOut"}}
-    className="w-full mt-10 border-t-4 min-40 px-15 bg-gray-800 flex flex-col font-sans">
+    className="w-full mt-10 border-t-4 min-40 px-6 bg-gray-800 flex flex-col font-sans">
 
         <div className="flex justify-between text-white py-5">
         <div>
